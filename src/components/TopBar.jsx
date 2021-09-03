@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 const useStyles = makeStyles({
   mainLogo: {
     fontSize: "4rem",
-    // color: "#FFF",
   },
   navLinks: {
     color:"#fff",
