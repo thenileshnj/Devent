@@ -6,6 +6,8 @@ const useStyles = makeStyles({
         marginBottom: "none",
         position: "stickey",
         bottom: "0",
+        right: "0",
+        left: "0",
         marginTop: "5rem",
         width: "100vw",
         color: "#fff",
