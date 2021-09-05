@@ -1,20 +1,17 @@
 import React, { useState } from "react";
 import { Button, Container,  FormControl,  FormGroup,  TextField,  Typography,  makeStyles,  Divider, } from "@material-ui/core";
-// import firebase from "firebase";
 import { db } from "../firebase_config";
 
 const useStyles = makeStyles((theme) => ({
   maintopmargin:{
     marginTop: "10rem"
 },
-  container: {
-    display: 'flex',
-    flexWrap: 'wrap',
-  },
   textField: {
-    marginLeft: theme.spacing(1),
-    marginRight: theme.spacing(1),
-    width: 200,
+    marginLeft: theme.spacing(5),
+    marginRight: theme.spacing(5),
+    marginBottom: "2rem",
+    fontWeight: "bolder",
+    fontSize: "10rem !important"
   },
 }));
 
@@ -34,13 +31,12 @@ const addEventValues = {
 const AddEvent = () => {
 
   const [getValues, setgetValues] = useState(addEventValues);
-  // const {eventName, eventDescription, eventWhoApply, eventConMob, eventConMail, eventLink,eventDate } = getValues;
 
   const classes= useStyles();
 
   const onValueChange = (e) => {
     setgetValues({...getValues, [e.target.name]: e.target.value});
-    console.log(getValues);
+    // console.log(getValues);
   }
 
 
@@ -70,6 +66,8 @@ const AddEvent = () => {
         <FormGroup autoComplete="off">
           <FormControl>
             <TextField
+              className={classes.textField}
+              autoComplete="off"
               label="Event Name"
               variant="outlined"
               color="secondary"
@@ -79,6 +77,8 @@ const AddEvent = () => {
           </FormControl>
           <FormControl>
             <TextField
+              className={classes.textField}
+              autoComplete="off"
               label="Event Description"
               variant="outlined"
               color="secondary"
@@ -88,6 +88,8 @@ const AddEvent = () => {
           </FormControl>
           <FormControl>
             <TextField
+              className={classes.textField}
+              autoComplete="off"
               label="Who can Apply"
               variant="outlined"
               color="primary"
@@ -97,6 +99,8 @@ const AddEvent = () => {
           </FormControl>
           <FormControl>
             <TextField
+              className={classes.textField}
+              autoComplete="off"
               label="Contact Mobile"
               variant="outlined"
               color="primary"
@@ -107,6 +111,8 @@ const AddEvent = () => {
           </FormControl>
           <FormControl>
             <TextField
+              className={classes.textField}
+              autoComplete="off"
               label="Contact mail"
               variant="outlined"
               color="primary"
@@ -117,6 +123,8 @@ const AddEvent = () => {
           </FormControl>
           <FormControl>
             <TextField
+              className={classes.textField}
+              autoComplete="off"
               label="Regestration Link"
               variant="outlined"
               color="primary"
@@ -126,6 +134,8 @@ const AddEvent = () => {
             />
           </FormControl>
             <TextField
+              className={classes.textField}
+              autoComplete="off"
               id="date"
               label="Event Date"
               type="date"
@@ -133,6 +143,7 @@ const AddEvent = () => {
               onChange={(e) => (onValueChange(e))}
               // defaultValue={Today}
               className={classes.textField}
+              autoComplete="off"
               InputLabelProps={{
                 shrink: true,
               }}
