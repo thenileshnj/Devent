@@ -7,7 +7,7 @@ const useStyles = makeStyles({
     fontSize: "4rem",
   },
   navLinks: {
-    // color:"#fff",
+    color:"#fff",
   },
   navMenu: {
     width: "100vw",
@@ -30,7 +30,7 @@ const TopBar = () => {
   const classes = useStyles();
 
   return (
-    <AppBar color="secondary" position="fixed">
+    <AppBar color="primary" position="fixed">
       <Toolbar>
         <Typography color="inherit" variant="h3" className={classes.mainLogo}>
           <Link className={classes.navLinks} to="/">
