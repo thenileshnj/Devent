@@ -7,7 +7,7 @@ const useStyles = makeStyles({
     fontSize: "4rem",
   },
   navLinks: {
-    color:"#fff",
+    // color:"#fff",
   },
   navMenu: {
     width: "100vw",
@@ -19,7 +19,7 @@ const useStyles = makeStyles({
     alignItems: "center",
     justifyContent: "flex-end",
     width: "100%",
-    fontSize: "2.3rem",
+    fontSize: "2rem",
   },
   navMenuListItem: {
     marginRight: "2rem",
@@ -30,14 +30,14 @@ const TopBar = () => {
   const classes = useStyles();
 
   return (
-    <AppBar position="fixed">
+    <AppBar color="secondary" position="fixed">
       <Toolbar>
         <Typography color="inherit" variant="h3" className={classes.mainLogo}>
           <Link className={classes.navLinks} to="/">
-          DEVENT
+          DEVENT 
           </Link>
         </Typography>
-        <Typography className={classes.navMenu}>
+        <Typography color="inherit" className={classes.navMenu}>
           <ul className={classes.navMenuList}>
             <li className={classes.navMenuListItem}>
               <Link className={classes.navLinks} to="addevent" > Add EVENT </Link>
