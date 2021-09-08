@@ -48,7 +48,6 @@ const AdminDashboard = () => {
           eventConMail: doc.data().eventConMail,
           eventLink: doc.data().eventLink,
           eventDate: doc.data().eventDate,
-          eventPermision: doc.data().eventPermision,
         }))
       );
     });
@@ -59,19 +58,7 @@ const AdminDashboard = () => {
     displayEvents();
   };
 
-  const permitForEvent = (id) => {
-    db.collection("deventLists").doc(id).update({
-      eventPermision: !id.eventPermision,
-      // eventPermision: {
-      //   if(eventPermision = "true") {
-      //    return  eventPermision = false;
-      //   },
-      //   if(eventPermision = "false") {
-      //    eventPermision = true
-      //   }
-      // },
-    });
-  };
+
 
   return (
     <>
@@ -89,8 +76,7 @@ const AdminDashboard = () => {
               <TableCell> Contact Number</TableCell>
               <TableCell> Contact Mail</TableCell>
               <TableCell> Event Link</TableCell>
-              <TableCell> Accept</TableCell>
-              <TableCell> Reject</TableCell>
+              <TableCell> Deleat </TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -107,13 +93,6 @@ const AdminDashboard = () => {
                     </a>
                   </TableCell>
                   <TableCell>
-                    <Button
-                      color={event.eventPermision ? "Secondary" : "Primary"}
-                      onClick={(id) => permitForEvent(event.id)}
-                      variant="contained"
-                    >
-                      {event.eventPermision ? " UnAccept " : "Accept"}
-                    </Button>
                   </TableCell>
                   <TableCell>
                     <Button

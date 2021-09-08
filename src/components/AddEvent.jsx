@@ -24,7 +24,6 @@ const addEventValues = {
   eventConMail:"",
   eventLink:"",
   eventDate:"",
-  eventPermision: false
 }
 
 
@@ -49,7 +48,6 @@ const AddEvent = () => {
   eventConMail: getValues.eventConMail,
   eventLink: getValues.eventLink,
   eventDate: getValues.eventDate,
-  eventPermision: getValues.eventPermision
      });
      
   }

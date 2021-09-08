@@ -58,7 +58,6 @@ const Home = () => {
 
   useEffect(() => {
     displayFilteredEvents();
-    // finalEvents();
   }, []);
 
   const [filteredEvents, setfilteredEvents] = useState([]);
@@ -75,20 +74,12 @@ const Home = () => {
           eventConMail: doc.data().eventConMail,
           eventLink: doc.data().eventLink,
           eventDate: doc.data().eventDate,
-          eventPermision: doc.data().eventPermision,
         }))
       );
     });
     
   };
 
-  // const finalEvents = () => {
-  //   displayFilteredEvents();
-  //   const eventLists = filteredEvents.filter((e) => {
-  //     return (e.eventPermision = "true");
-  //   });
-  //   setfilteredEvents(eventLists);
-  // };
 
   return (
     <>
